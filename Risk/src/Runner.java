@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class RiskRunner
+public class Runner
 	{
 
 		// Data sets and static variables here VVVV

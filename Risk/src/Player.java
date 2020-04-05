@@ -8,6 +8,6 @@ public class Player
 	public Player(String n, ArrayList<Territory> pT)
 	{
 		name = n;
-		playerTerritories = pT;
+		playerTerritories = pT; 
 	}
 }

@@ -16,7 +16,7 @@ public class PlayingGame
 					+ "\n(2) Attack"
 					+ "\n(3) See general map");
 			
-			int playerChoice = RiskRunner.userIntInput.nextInt();
+			int playerChoice = Runner.userIntInput.nextInt();
 			
 			
 			if (playerChoice == 1)
