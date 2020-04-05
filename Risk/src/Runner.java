@@ -12,10 +12,15 @@ public class Runner
 		
 		public static void main(String[] args)
 			{
+
 				
 				Introduction.introducePlayers();
 				PlayingGame.playingGame();
 				
+
+				Map.printBlankMap();
+				Map.printMapWithPlaceHolders();
+
 			}
 		
 	}
