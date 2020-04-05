@@ -1,7 +1,6 @@
 
 public class Introduction
 {
-	
 	public static void introducePlayers()
 	{
 		System.out.println("Welcome to Risk. This game will be based in America, with 8 territories to take over.");
