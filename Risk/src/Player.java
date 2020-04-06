@@ -10,6 +10,9 @@ public class Player
 	public Player(String n, ArrayList<Territory> pT, int tT)
 	{
 		name = n;
+		playerTerritories = pT; 
+		
+
 		playerTerritories = pT;
 		totalTerritories = tT;
 	}

@@ -43,10 +43,10 @@ public class Map
 					"     ',        |            |~~~~~~~|    \\    ,'~~\\  /    |\n" +
 					"      |        |    FOUR    |             \\_-~     `~     \\\n" +
 					"      ',      ,-  CORNERS  -+             /   DIXELAND    /\n" +
-					"       '_     |    xxxx    |    SUNBELT   |     xxxx    ,/\n" +
+					"       '_      |    xxxx    |    SUNBELT   |     xxxx    ,/\n" +
 					"         \\    |    xxxx    |     xxxx     /     xxxx   /\n" +
-					"          ~~~-'            |     xxxx    |            /\n" +
-					"              '-,_    _____|             /            \\\n" +
+					"          ~~~-'             |     xxxx    |            /\n" +
+					"              '-,_     _____|             /            \\\n" +
 					"                  `~'~  \\                `--,~~~~-~~,  \\\n" +
 					"                         \\/~\\      /~~~`---`         |  \\\n" +
 					"                             \\    /                   \\  |\n" +
