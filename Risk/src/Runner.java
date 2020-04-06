@@ -17,10 +17,10 @@ public class Runner
 			{
 
 				
-//				Introduction.introducePlayers();
-//				PlayingGame.playingGame();
-//				Map.printBlankMap();
-//				Map.printMapWithPlaceHolders();
+				Introduction.introducePlayers();
+				PlayingGame.playingGame();
+				Map.printBlankMap();
+				Map.printMapWithPlaceHolders();
 				
 				File territories = new File("Risk/TerritoriesInput.txt");
 				DealingOut.makeTerritories(territories);

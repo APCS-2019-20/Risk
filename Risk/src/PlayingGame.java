@@ -21,7 +21,7 @@ public class PlayingGame
 			
 			if (playerChoice == 1)
 			{
-				//Show map as well as what they own with how many
+				Map.printBlankMap();
 			}
 			else if(playerChoice == 2)
 			{
