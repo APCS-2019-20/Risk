@@ -19,6 +19,8 @@ public class DealingOut
 		Territory temp = new Territory(name, 0, toAccess);
 		Runner.territoriesArray.add(temp);
 		}
+		
+		addTerritoryRefs();
 
 	}
 
@@ -35,4 +37,31 @@ public class DealingOut
 		
 		return temp;
 	}
+	
+		private static Territory findTerritoryByName(String name)
+			{
+				for (Territory t : Runner.territoriesArray)
+					{
+						if (t.getName().equals(name))
+							{
+								return t;
+							}
+
+					}
+				return null;
+
+			}
+
+		private static void addTerritoryRefs()
+			{
+				for (Territory t : Runner.territoriesArray)
+					{
+						for (String n : t.getCanAccess())
+							{
+								t.addCanAccessTerritory(findTerritoryByName(n));
+							}
+					}
+			
+			
+		}
 }
