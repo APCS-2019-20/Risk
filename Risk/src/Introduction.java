@@ -1,6 +1,7 @@
 
 public class Introduction
 {
+	// Have the player receive 16 total "armies" to begin with
 	public static void introducePlayers()
 	{
 		System.out.println("Welcome to Risk. This game will be based in America, with 8 territories to take over.");
