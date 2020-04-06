@@ -22,7 +22,7 @@ public class Runner
 //				Map.printBlankMap();
 //				Map.printMapWithPlaceHolders();
 				
-				File territories = new File("TerritoriesInput.txt");
+				File territories = new File("Risk/TerritoriesInput.txt");
 				DealingOut.makeTerritories(territories);
 				
 				//print temporary information
