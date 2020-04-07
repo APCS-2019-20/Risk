@@ -21,7 +21,7 @@ public class Runner
 				PlayingGame.playingGame();
 
 				
-				File territories = new File("Risk/TerritoriesInput.txt");
+				File territories = new File("TerritoriesInput.txt");
 				DealingOut.makeTerritories(territories);
 				
 				//print temporary information
