@@ -7,14 +7,11 @@ public class Player
 	private int totalTerritories;
 	
 	
-	public Player(String n, ArrayList<Territory> pT, int tT)
+	public Player(String n)
 	{
 		name = n;
-		playerTerritories = pT; 
-		
-
-		playerTerritories = pT;
-		totalTerritories = tT;
+		playerTerritories = new ArrayList<Territory>();
+		totalTerritories = 0;
 	}
 
 

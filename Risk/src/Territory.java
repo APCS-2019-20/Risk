@@ -6,6 +6,7 @@ public class Territory
 	private int numberOfUnits;
 	private ArrayList<String> canAccess;
 	private ArrayList<Territory> canAccessTerritory;
+	private Player owner;
 	
 	public Territory(String n, int nOU, ArrayList<String> cA)
 	{
@@ -13,6 +14,7 @@ public class Territory
 		numberOfUnits = nOU;
 		canAccess = cA;
 		canAccessTerritory = new ArrayList<Territory>();
+		owner = null;
 	}
 
 	public String getName()
@@ -59,6 +61,21 @@ public class Territory
 			{
 				this.canAccessTerritory.add(territory);
 			}
+
+		public Player getOwner()
+			{
+				return owner;
+			}
+
+		public void setOwner(Player owner)
+			{
+				this.owner = owner;
+			}
+		
+		public void swapOwnership(){
+			this.owner = Runner.players.get((Runner.players.indexOf(this.owner)+1)%2);
+			
+		}
 	
 }
 
