@@ -38,7 +38,7 @@ public class DealingOut
 		return temp;
 	}
 	
-		private static Territory findTerritoryByName(String name)
+		public static Territory findTerritoryByName(String name)
 			{
 				for (Territory t : Runner.territoriesArray)
 					{

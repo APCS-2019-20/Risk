@@ -15,10 +15,7 @@ public class Introduction
 		//RiskRunner.players.add(new Player(playerTwoName)); // <--- We need to make sure that when we add more stuff to the POJO we can change it here
 		System.out.println("Welcome, " + playerTwoName);
 		
-		System.out.println("Would you like the directions? \n(1) Yes \n(2) No");
-		//Directions class to be imported to list out the directions WIP
 		
-		System.out.println("Lets go!\n\n");
 	}
 	
 }
