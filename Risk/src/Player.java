@@ -37,6 +37,11 @@ public class Player
 	{
 		this.playerTerritories = playerTerritories;
 	}
+	
+		public void addPlayerTerritories(Territory territory)
+			{
+				this.playerTerritories.add(territory);
+			}
 
 
 	public int getTotalTerritories()
