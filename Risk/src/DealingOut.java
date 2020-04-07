@@ -52,10 +52,7 @@ public class DealingOut
 
 			}
 		
-		private static void addInfantryEachRound()
-		{
-			int addedTroops=(int) player.getPlayerTerritories.length /3;
-		}
+
 
 		private static void addTerritoryRefs()
 			{
