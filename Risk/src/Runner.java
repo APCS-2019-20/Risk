@@ -19,10 +19,9 @@ public class Runner
 				
 				Introduction.introducePlayers();
 				PlayingGame.playingGame();
-				Map.printBlankMap();
-				Map.printMapWithPlaceHolders();
+
 				
-				File territories = new File("Risk/TerritoriesInput.txt");
+				File territories = new File("TerritoriesInput.txt");
 				DealingOut.makeTerritories(territories);
 				
 				//print temporary information
