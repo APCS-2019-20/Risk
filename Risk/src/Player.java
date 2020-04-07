@@ -5,6 +5,7 @@ public class Player
 	private String name;
 	private ArrayList<Territory> playerTerritories = new ArrayList<Territory>();
 	private int totalTerritories;
+	private int playerRegimens;
 	
 	
 	public Player(String n)
@@ -12,6 +13,7 @@ public class Player
 		name = n;
 		playerTerritories = new ArrayList<Territory>();
 		totalTerritories = 0;
+		playerRegimens = 0;
 	}
 
 
@@ -48,6 +50,16 @@ public class Player
 	public void setTotalTerritories(int totalTerritories)
 	{
 		this.totalTerritories = totalTerritories;
+	}
+	
+	public int getplayerRegimens()
+	{
+		return playerRegimens;
+	}
+	
+	public void setPlayerRegimens(int playerRegimens)
+	{
+		this.playerRegimens = playerRegimens;
 	}
 	
 }
