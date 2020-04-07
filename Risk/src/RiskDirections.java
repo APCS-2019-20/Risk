@@ -57,13 +57,31 @@ public class RiskDirections
 	
 	public static void learnRules()
 	{
+		Introduction.introducePlayers();
+		
+		System.out.println("");
 		System.out.println("Okay, so the rules to Risk: United States can be a little bit confusing."
 							+ "\n The game makes more sence when you actually start playing the game."
 							+ "\n Let's start out with how to set up the board. Your board looks like this: ");
 		
 							Map.printMapWithPlaceHolders();
 							
+		System.out.println("There are 8 territories you two must compete to conquer these territories in order win."
+				+ "\n These terriotires are: "
+				+ "\n THE WEST"
+				+ "\n FOUR CORNERS"
+				+ "\n UPPER MIDWEST"
+				+ "\n SUNBELT"
+				+ "\n GREAT LAKES"
+				+ "\n DIXIELAND"
+				+ "\n NORTHEAST"
+				+ "\n NEW ENGLAND");
+		
 		System.out.println("");
 		
+		
+		System.out.println("To Start the game each of you have to choose which territoies you wish to own."
+				+ "\n However, this will rotate between the two of you, so basically whoever gets there first gets that territory...for now...;)");
+			biding.startingOut();
 	}
 }
