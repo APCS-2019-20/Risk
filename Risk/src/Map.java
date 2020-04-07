@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class Map
 	{
@@ -63,6 +64,25 @@ public class Map
 		
 		
 		public static void printMapWithInfo() {
+			ArrayList<Territory> t = new ArrayList<Territory>();
+			String[] tNames = {
+					"The West",
+					"Four Corners",
+					"Upper Midwest",
+					"Sunbelts",
+					"Great Lakes",
+					"Dixieland",
+					"Northeast",
+					"New England"
+			};
+				for (String s : tNames)
+					{
+						t.add(DealingOut.findTerritoryByName(s));
+					}
+			
+			
+			
+			
 			System.out.printf(""+
 					"         ,__                                                  _, \n" +
 					"      \\~\\|  ~~---___              ,                          | \\\n" +
@@ -87,20 +107,20 @@ public class Map
 					"                               `~'\n",
 					"NEg1",
 					"NtE1",
-					"NEg2",
+					t.get(7).getNumberOfUnits(),
 					"Wst1",
 					"UMW1",
-					"NtE2",
-					"Wst2",
-					"UMW2",
+					t.get(6).getNumberOfUnits(),
+					t.get(0).getNumberOfUnits(),
+					t.get(2).getNumberOfUnits(),
 					"GtL1",
-					"GtL2",
+					t.get(4).getNumberOfUnits(),
 					"FCn1",
 					"DxL1",
-					"FCn2",
+					t.get(1).getNumberOfUnits(),
 					"SnB1",
-					"DxL2",
-					"SnB2"
+					t.get(5).getNumberOfUnits(),
+					t.get(3).getNumberOfUnits()
 					);
 			
 			
