@@ -8,6 +8,7 @@ public class Player
 	private String nickname;
 	
 	
+
 	public Player(String n, ArrayList<Territory> pT, String nn, int tT)
 	{
 		name = n;
@@ -16,6 +17,13 @@ public class Player
 		playerTerritories = pT;
 		totalTerritories = tT;
 		
+
+	public Player(String n)
+	{
+		name = n;
+		playerTerritories = new ArrayList<Territory>();
+		totalTerritories = 0;
+
 	}
 
 

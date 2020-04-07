@@ -21,7 +21,7 @@ public class PlayingGame
 			
 			if (playerChoice == 1)
 			{
-				Map.printBlankMap();
+				Map.printMapWithInfo();
 			}
 			else if(playerChoice == 2)
 			{
@@ -29,9 +29,7 @@ public class PlayingGame
 			}
 			else if(playerChoice == 3)
 			{
-				JFrame map = new JFrame();
-				ImageIcon coloredMap = new ImageIcon(("RiskBoardGameUSA.jpg"));
-				JOptionPane.showMessageDialog(map, "Here is the colored map", null, 0, coloredMap);
+				Map.printBlankMap();
 			}
 		}
 	}

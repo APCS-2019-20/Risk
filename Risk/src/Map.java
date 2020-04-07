@@ -105,20 +105,20 @@ public class Map
 					"                             \\    /                   \\  |\n" +
 					"                              \\  |                     '\\'\n" +
 					"                               `~'\n",
-					"NEg1",
-					"NtE1",
+					t.get(7).getOwner().getName(),
+					t.get(6).getOwner().getName(),
 					t.get(7).getNumberOfUnits(),
-					"Wst1",
-					"UMW1",
+					t.get(0).getOwner().getName(),
+					t.get(3).getOwner().getName(),
 					t.get(6).getNumberOfUnits(),
 					t.get(0).getNumberOfUnits(),
 					t.get(2).getNumberOfUnits(),
-					"GtL1",
+					t.get(4).getOwner().getName(),
 					t.get(4).getNumberOfUnits(),
-					"FCn1",
-					"DxL1",
+					t.get(1).getOwner().getName(),
+					t.get(5).getOwner().getName(),
 					t.get(1).getNumberOfUnits(),
-					"SnB1",
+					t.get(3).getOwner().getName(),
 					t.get(5).getNumberOfUnits(),
 					t.get(3).getNumberOfUnits()
 					);
