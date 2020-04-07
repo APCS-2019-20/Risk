@@ -54,6 +54,12 @@ public class Player
 		this.playerTerritories = playerTerritories;
 	}
 	
+
+		public void addPlayerTerritories(Territory territory)
+			{
+				this.playerTerritories.add(territory);
+			}
+
 	public String getNickname()
 	{
 		if (name.length()>= 4)
@@ -71,6 +77,7 @@ public class Player
 	{
 		this.nickname = nickname;
 	}
+
 
 
 	public int getTotalTerritories()
