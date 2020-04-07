@@ -5,16 +5,17 @@ public class Player
 	private String name;
 	private ArrayList<Territory> playerTerritories = new ArrayList<Territory>();
 	private int totalTerritories;
+	private String nickname;
 	
 	
-	public Player(String n, ArrayList<Territory> pT, int tT)
+	public Player(String n, ArrayList<Territory> pT, String nn, int tT)
 	{
 		name = n;
-		playerTerritories = pT; 
-		
-
+		playerTerritories = pT;
+		nickname=nn;
 		playerTerritories = pT;
 		totalTerritories = tT;
+		
 	}
 
 
@@ -39,6 +40,24 @@ public class Player
 	public void setPlayerTerritories(ArrayList<Territory> playerTerritories)
 	{
 		this.playerTerritories = playerTerritories;
+	}
+	
+	public String getNickname()
+	{
+		if (name.length()>= 4)
+		{
+		return name.substring(0, 4);
+		}
+		else
+		{
+		return name;
+		}
+	}
+
+
+	public void setNickname(String nickname)
+	{
+		this.nickname = nickname;
 	}
 
 
