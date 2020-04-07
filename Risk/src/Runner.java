@@ -16,7 +16,7 @@ public class Runner
 		public static void main(String[] args) throws FileNotFoundException
 			{
 
-				
+				RiskDirections.StartGame();
 				Introduction.introducePlayers();
 				PlayingGame.playingGame();
 
