@@ -11,18 +11,35 @@ public class CodeTest
 			
 				Map.printMapWithPlaceHolders();
 				
-				Player temp = new Player("Bruh");
+				Player bruh = new Player("Bruh");
 				
-				temp.addPlayerTerritories(DealingOut.findTerritoryByName("Sunbelts"));
-				temp.getPlayerTerritories().get(0).setNumberOfUnits(5);
+				bruh.addPlayerTerritories(DealingOut.findTerritoryByName("Sunbelts"));
+				bruh.getPlayerTerritories().get(0).setNumberOfUnits(5);
 				
-				temp.addPlayerTerritories(DealingOut.findTerritoryByName("Four Corners"));
-				temp.getPlayerTerritories().get(1).setNumberOfUnits(3);
+				bruh.addPlayerTerritories(DealingOut.findTerritoryByName("Four Corners"));
+				bruh.getPlayerTerritories().get(1).setNumberOfUnits(3);
 
-				temp.addPlayerTerritories(DealingOut.findTerritoryByName("Upper Midwest"));
-				temp.getPlayerTerritories().get(2).setNumberOfUnits(4);
+				bruh.addPlayerTerritories(DealingOut.findTerritoryByName("Upper Midwest"));
+				bruh.getPlayerTerritories().get(2).setNumberOfUnits(4);
 				
-				Map.printMapWithOwner(temp);
+				bruh.addPlayerTerritories(DealingOut.findTerritoryByName("The West"));
+				bruh.getPlayerTerritories().get(3).setNumberOfUnits(6);
+				
+				Player boi = new Player("Boi");
+				
+				boi.addPlayerTerritories(DealingOut.findTerritoryByName("Great Lakes"));
+				boi.getPlayerTerritories().get(0).setNumberOfUnits(5);
+				
+				boi.addPlayerTerritories(DealingOut.findTerritoryByName("Dixieland"));
+				boi.getPlayerTerritories().get(1).setNumberOfUnits(3);
+
+				boi.addPlayerTerritories(DealingOut.findTerritoryByName("Northeast"));
+				boi.getPlayerTerritories().get(2).setNumberOfUnits(4);
+				
+				boi.addPlayerTerritories(DealingOut.findTerritoryByName("New England"));
+				boi.getPlayerTerritories().get(3).setNumberOfUnits(6);
+				
+				Map.printMapWithInfo();
 				
 				
 			}

@@ -60,6 +60,7 @@ public class Player
 		public void addPlayerTerritories(Territory territory)
 			{
 				this.playerTerritories.add(territory);
+				territory.setOwner(this);
 			}
 
 	public String getNickname()
