@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class Player
 {
 	private String name;
+	private String nickname;
 	private ArrayList<Territory> playerTerritories = new ArrayList<Territory>();
 	private int totalTerritories;
 
@@ -20,6 +21,7 @@ public class Player
 		playerTerritories = pT;
 		totalTerritories = tT;
 		
+	}
 
 	public Player(String n)
 	{
