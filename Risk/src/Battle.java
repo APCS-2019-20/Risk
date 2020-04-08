@@ -65,7 +65,7 @@ public class Battle
 			{
 				Player attacker = territory.getOwner();
 
-				System.out.println("Attacking from " + territory.getName());
+//				System.out.println("Attacking from " + territory.getName());
 
 				// choose who to attack
 
@@ -105,6 +105,21 @@ public class Battle
 			
 			public static void attack(Territory departee, Territory target) {
 				System.out.println("succ");
+				//ask for dice amount of attacker
+				//ask for dice amount of opponent
+				
+				//roll
+				//print
+				
+				//evaluate rolls
+				//display the outcomes
+				
+				//check if target is destroyed
+				//	change ownership
+				//	move troops
+				
+				//	check if there are enough to try again
+				//	ask to forfeit
 			}
 			
 		}
