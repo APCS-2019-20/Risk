@@ -167,7 +167,7 @@ public class Battle
 				
 				
 				
-				System.out.println();
+				System.out.println("\nOutcomes:");
 				//evaluate rolls
 				int attackerLoss = 0;
 				int opponentLoss = 0;
@@ -209,7 +209,8 @@ public class Battle
 				departee.removeUnits(attackerLoss);
 				target.removeUnits(opponentLoss);
 				
-				Map.printMapWithInfo();
+				
+				
 				//check if target is destroyed
 				//	change ownership
 				//	move troops
@@ -243,10 +244,17 @@ public class Battle
 			
 			public static void  printDice(ArrayList<Integer> rolls) {
 				
+				ArrayList<String[]> dice = new ArrayList<String[]>();
 				for(Integer n: rolls) {
-					System.out.print(n + " ");
+					dice.add(asciiDie(n));
 				}
-				System.out.println();
+				
+				for(int i = 0; i < 5; i++) {
+					for(String[] s: dice) {
+						System.out.print(s[i] + " ");
+					}
+					System.out.println();
+				}
 				
 				
 				
@@ -265,14 +273,95 @@ public class Battle
 		
 			public static void printDicePair(int a, int o) {
 				
-				System.out.print(a);
+				String[] A = asciiDie(a);
+				String[] O = asciiDie(o);
+				
+				System.out.println("+---------+   +---------+");
+				System.out.println(A[1] + "   " + O[1]);
+				System.out.print(A[2]);
 				if(a>o) {
 					System.out.print(" > ");
 				}else {
 					System.out.print(" < ");
 				}
-				System.out.println(o);
+				System.out.println(O[2]);
+				System.out.println(A[3] + "   " + O[3]);
+				System.out.println("+---------+   +---------+");
+
 				
+				
+				
+				
+				
+				
+//				System.out.print(a);
+//				if(a>o) {
+//					System.out.print(" > ");
+//				}else {
+//					System.out.print(" < ");
+//				}
+//				System.out.println(o);
+				
+				
+				
+			}
+	
+			public static String[] asciiDie(int d) {
+				String out[] = new String[5];
+				out[0] = "+---------+";
+				
+				
+				//line one
+				switch(d) {
+					case 1:
+						out[1] = "|         |";
+						break;
+					case 2:
+					case 3:
+						out[1] = "| x       |";
+						break;
+					default:
+						out[1] = "| x     x |";
+					
+				}
+				
+				//line 2
+				switch(d) {
+					case 1:
+					case 5:
+					case 3:
+						out[2] = "|    x    |";
+						break;
+					case 2:
+					case 4:
+						out[2] = "|         |";
+						break;
+					default:
+						out[2] = "| x     x |";
+					
+					
+				}
+				
+				
+				
+				//third line
+				switch(d) {
+				case 1:
+					out[3] = "|         |";
+					break;
+				case 2:
+				case 3:
+					out[3] = "|       x |";
+					break;
+				default:
+					out[3] = "| x     x |";
+				
+			}
+				
+				out[4] = "+---------+";
+				
+				
+			return out;	
 			}
 	}
 		
