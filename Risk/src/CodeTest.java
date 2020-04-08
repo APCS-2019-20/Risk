@@ -9,11 +9,11 @@ public class CodeTest
 				DealingOut.makeTerritories(territories);
 				
 			
-				Map.printMapWithPlaceHolders();
-				
+
+				//temp game of Risk
 				Player bruh = new Player("Bruh");
 				
-				bruh.addPlayerTerritories(DealingOut.findTerritoryByName("Sunbelts"));
+				bruh.addPlayerTerritories(DealingOut.findTerritoryByName("The West"));
 				bruh.getPlayerTerritories().get(0).setNumberOfUnits(5);
 				
 				bruh.addPlayerTerritories(DealingOut.findTerritoryByName("Four Corners"));
@@ -22,8 +22,8 @@ public class CodeTest
 				bruh.addPlayerTerritories(DealingOut.findTerritoryByName("Upper Midwest"));
 				bruh.getPlayerTerritories().get(2).setNumberOfUnits(4);
 				
-				bruh.addPlayerTerritories(DealingOut.findTerritoryByName("The West"));
-				bruh.getPlayerTerritories().get(3).setNumberOfUnits(6);
+				bruh.addPlayerTerritories(DealingOut.findTerritoryByName("Sunbelts"));
+				bruh.getPlayerTerritories().get(3).setNumberOfUnits(2);
 				
 				Player boi = new Player("Boi");
 				
@@ -41,6 +41,7 @@ public class CodeTest
 				
 				Map.printMapWithInfo();
 				
+				Battle.chooseAttack(bruh);
 				
 			}
 
