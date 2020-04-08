@@ -148,12 +148,14 @@ public class Battle
 				//roll
 				ArrayList<Integer> AttackRolls = new ArrayList<Integer>();
 				ArrayList<Integer> OpponentRolls = new ArrayList<Integer>();
-				for(int i = 0; i < amtAttackDie; i++) {
-					AttackRolls.add((int) (Math.random() * 6)+1);
-				}
-				for(int i = 0; i < amtOpponentDie; i++) {
-					OpponentRolls.add((int) (Math.random() * 6)+1);
-				}
+				for (int i = 0; i < amtAttackDie; i++)
+					{
+						AttackRolls.add((int) (Math.random() * 6) + 1);
+					}
+				for (int i = 0; i < amtOpponentDie; i++)
+					{
+						OpponentRolls.add((int) (Math.random() * 6) + 1);
+					}
 				
 				
 				//print
