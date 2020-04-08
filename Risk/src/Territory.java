@@ -10,11 +10,11 @@ public class Territory
 	
 	public Territory(String n, int nOU, ArrayList<String> cA)
 	{
-		name = n;
-		numberOfUnits = nOU;
-		canAccess = cA;
-		canAccessTerritory = new ArrayList<Territory>();
-		owner = null;
+		this.name = n;
+		this.numberOfUnits = nOU;
+		this.canAccess = cA;
+		this.canAccessTerritory = new ArrayList<Territory>();
+		this.owner = null;
 	}
 
 	public String getName()
