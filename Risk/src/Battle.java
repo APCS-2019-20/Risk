@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 
 public class Battle
 	{
@@ -54,7 +55,7 @@ public class Battle
 				}else {
 					System.out.println("Not a valid index.");
 				}
-				}catch(Exception ex) {
+				}catch(InputMismatchException ex) {
 					System.out.println("Not a number.");
 				}
 				
@@ -165,9 +166,50 @@ public class Battle
 				printDice(OpponentRolls);
 				
 				
-				//evaluate rolls
-				//display the outcomes
 				
+				System.out.println();
+				//evaluate rolls
+				int attackerLoss = 0;
+				int opponentLoss = 0;
+				
+				//for loop
+				//is there a number in both?
+				while (AttackRolls.size() != 0 && OpponentRolls.size() != 0)
+					{
+						// grab the highest number from each
+						int attackHigh = pullBiggest(AttackRolls);
+						AttackRolls.remove(AttackRolls.indexOf(attackHigh));
+
+						int opponentHigh = pullBiggest(OpponentRolls);
+						OpponentRolls.remove(OpponentRolls.indexOf(opponentHigh));
+
+						// the lower roll(preference bias towards the opponent) loss++
+						if (attackHigh > opponentHigh)
+							{
+								opponentLoss++;
+							} else
+							{
+								attackerLoss++;
+							}
+
+						// display individual outcome
+						printDicePair(attackHigh, opponentHigh);
+					}
+				
+				//display overall losses
+						
+				System.out.print(attacker.getName() + ", you lost " + attackerLoss);
+				System.out.print(attackerLoss != 1? " troops":" troop");
+				System.out.println(" from "+ departee.getName() + ".");
+				System.out.print(opponent.getName() + ", you lost " + opponentLoss);
+				System.out.print(opponentLoss != 1? " troops":" troop");
+				System.out.println(" from " + target.getName() + ".");
+				
+				//update the damage
+				departee.removeUnits(attackerLoss);
+				target.removeUnits(opponentLoss);
+				
+				Map.printMapWithInfo();
 				//check if target is destroyed
 				//	change ownership
 				//	move troops
@@ -211,7 +253,28 @@ public class Battle
 				
 			}
 			
-		}
+			public static int pullBiggest(ArrayList<Integer> rolls) {
+				int max = Integer.MIN_VALUE;
+				for(Integer n:rolls) {
+					if(max<n) {
+						max=n;
+					}
+				}
+				return max;
+			}
+		
+			public static void printDicePair(int a, int o) {
+				
+				System.out.print(a);
+				if(a>o) {
+					System.out.print(" > ");
+				}else {
+					System.out.print(" < ");
+				}
+				System.out.println(o);
+				
+			}
+	}
 		
 		
 		

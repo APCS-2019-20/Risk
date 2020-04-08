@@ -36,6 +36,10 @@ public class Territory
 	{
 		this.numberOfUnits = numberOfUnits;
 	}
+	
+	public void removeUnits(int r) {
+		this.numberOfUnits-=r;
+	}
 
 	public ArrayList<String> getCanAccess()
 	{
