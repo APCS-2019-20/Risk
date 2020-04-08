@@ -60,7 +60,11 @@ public class DealingOut
 					{
 						for (String n : t.getCanAccess())
 							{
-								t.addCanAccessTerritory(findTerritoryByName(n));
+								Territory temp =findTerritoryByName(n);
+								if(temp==null) {
+									System.out.println("Alert! " + n);
+								}
+										t.addCanAccessTerritory(temp);
 							}
 					}
 			

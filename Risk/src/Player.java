@@ -3,9 +3,13 @@ import java.util.ArrayList;
 public class Player
 {
 	private String name;
+	private String nickname;
 	private ArrayList<Territory> playerTerritories = new ArrayList<Territory>();
 	private int totalTerritories;
-	private String nickname;
+
+	private int playerRegimens;
+
+
 	
 	
 
@@ -17,12 +21,15 @@ public class Player
 		playerTerritories = pT;
 		totalTerritories = tT;
 		
+	}
+
 
 	public Player(String n)
 	{
 		name = n;
 		playerTerritories = new ArrayList<Territory>();
 		totalTerritories = 0;
+		playerRegimens = 0;
 
 	}
 
@@ -50,6 +57,13 @@ public class Player
 		this.playerTerritories = playerTerritories;
 	}
 	
+
+		public void addPlayerTerritories(Territory territory)
+			{
+				this.playerTerritories.add(territory);
+				territory.setOwner(this);
+			}
+
 	public String getNickname()
 	{
 		if (name.length()>= 4)
@@ -69,6 +83,7 @@ public class Player
 	}
 
 
+
 	public int getTotalTerritories()
 	{
 		return totalTerritories;
@@ -78,6 +93,16 @@ public class Player
 	public void setTotalTerritories(int totalTerritories)
 	{
 		this.totalTerritories = totalTerritories;
+	}
+	
+	public int getplayerRegimens()
+	{
+		return playerRegimens;
+	}
+	
+	public void setPlayerRegimens(int playerRegimens)
+	{
+		this.playerRegimens = playerRegimens;
 	}
 	
 }
