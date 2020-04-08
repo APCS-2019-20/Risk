@@ -20,7 +20,6 @@ public class Player
 		playerTerritories = pT;
 		totalTerritories = tT;
 		
-
 	public Player(String n)
 	{
 		name = n;

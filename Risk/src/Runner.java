@@ -15,14 +15,13 @@ public class Runner
 		
 		public static void main(String[] args) throws FileNotFoundException
 			{
-
+				File territories = new File("TerritoriesInput.txt");
+				DealingOut.makeTerritories(territories);
 				RiskDirections.StartGame();
-				Introduction.introducePlayers();
 				PlayingGame.playingGame();
 
 				
-				File territories = new File("TerritoriesInput.txt");
-				DealingOut.makeTerritories(territories);
+				
 				
 				//print temporary information
 				for (int i = 0; i < territoriesArray.size(); i++)
