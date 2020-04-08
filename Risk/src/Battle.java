@@ -118,7 +118,7 @@ public class Battle
 				if (amtAttackDie != 1)
 					{
 						System.out.println(attacker.getName() + ", you can roll up to " + amtAttackDie
-								+ " die. How many would you like to roll?");
+								+ " dice. How many would you like to roll?");
 						amtAttackDie = askForNumber(amtAttackDie);
 					} else
 					{
@@ -137,7 +137,7 @@ public class Battle
 				if (amtOpponentDie != 1)
 					{
 						System.out.println(opponent.getName() + ", you can roll up to " + amtOpponentDie
-								+ " die. How many would you like to roll?");
+								+ " dice. How many would you like to roll?");
 						amtOpponentDie = askForNumber(amtOpponentDie);
 					} else
 					{
@@ -146,8 +146,22 @@ public class Battle
 					}
 				
 				//roll
-				System.out.println("Test");
+				ArrayList<Integer> AttackRolls = new ArrayList<Integer>();
+				ArrayList<Integer> OpponentRolls = new ArrayList<Integer>();
+				for(int i = 0; i < amtAttackDie; i++) {
+					AttackRolls.add((int) (Math.random() * 6)+1);
+				}
+				for(int i = 0; i < amtOpponentDie; i++) {
+					OpponentRolls.add((int) (Math.random() * 6)+1);
+				}
+				
+				
 				//print
+				System.out.println(attacker.getName()+ ", you rolled:");
+				printDice(AttackRolls);
+				System.out.println("\n"+ opponent.getName()+ ", you rolled:");
+				printDice(OpponentRolls);
+				
 				
 				//evaluate rolls
 				//display the outcomes
@@ -178,6 +192,19 @@ public class Battle
 				}
 				}
 				return -1;
+				
+				
+			}
+			
+			
+			public static void  printDice(ArrayList<Integer> rolls) {
+				
+				for(Integer n: rolls) {
+					System.out.print(n + " ");
+				}
+				System.out.println();
+				
+				
 				
 				
 			}
