@@ -49,7 +49,7 @@ public class Battle
 					if(choice == index) {
 						return;
 					}else {
-						attackFrom(possibleDepartures.get(choice -1));
+						chooseTarget(possibleDepartures.get(choice -1));
 					}
 				}else {
 					System.out.println("Not a valid index.");
@@ -61,7 +61,7 @@ public class Battle
 				
 		}
 		
-		public static void attackFrom(Territory territory)
+		public static void chooseTarget(Territory territory)
 			{
 				Player attacker = territory.getOwner();
 
@@ -104,11 +104,49 @@ public class Battle
 			}
 			
 			public static void attack(Territory departee, Territory target) {
-				System.out.println("succ");
+				System.out.println("\n\n" + departee.getName() + " --> " + target.getName());
+				
+				Player attacker = departee.getOwner();
+				Player opponent = target.getOwner();
+				
 				//ask for dice amount of attacker
+				int amtAttackDie = 3;
+				if (departee.getNumberOfUnits() < 3)
+					{
+						amtAttackDie = departee.getNumberOfUnits();
+					}
+				if (amtAttackDie != 1)
+					{
+						System.out.println(attacker.getName() + ", you can roll up to " + amtAttackDie
+								+ " die. How many would you like to roll?");
+						amtAttackDie = askForNumber(amtAttackDie);
+					} else
+					{
+						System.out.println(attacker.getName() + ", you can only roll one die.");
+						amtAttackDie = 1;
+					}
+				
+				
+				
 				//ask for dice amount of opponent
+				int amtOpponentDie = 2;
+				if (departee.getNumberOfUnits() < 2)
+					{
+						amtOpponentDie = departee.getNumberOfUnits();
+					}
+				if (amtOpponentDie != 1)
+					{
+						System.out.println(opponent.getName() + ", you can roll up to " + amtOpponentDie
+								+ " die. How many would you like to roll?");
+						amtOpponentDie = askForNumber(amtOpponentDie);
+					} else
+					{
+						System.out.println(opponent.getName() + ", you can only roll one die.");
+						amtOpponentDie = 1;
+					}
 				
 				//roll
+				System.out.println("Test");
 				//print
 				
 				//evaluate rolls
@@ -120,6 +158,28 @@ public class Battle
 				
 				//	check if there are enough to try again
 				//	ask to forfeit
+			}
+			
+			public static int askForNumber(int max) {
+				boolean asking = true;
+				while(asking) {
+				try {
+					int choice = Runner.userIntInput.nextInt();
+					if(choice > 0 && choice <= max) {
+						return choice;
+					}else {
+						System.out.println("Not a valid number.");
+					}
+					
+					
+				}catch(Exception e) {
+					System.out.println("Not a number.");
+					asking = false;
+				}
+				}
+				return -1;
+				
+				
 			}
 			
 		}
