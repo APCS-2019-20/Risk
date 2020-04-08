@@ -1,5 +1,5 @@
 The West+Four Corners%Upper Midwest
-Four Corners+The West%Upper MIdwest%Sunbelts
+Four Corners+The West%Upper Midwest%Sunbelts
 Upper Midwest+The West%Four Corners%Sunbelts%Great Lakes
 Sunbelts+Four Corners%Upper Midwest%Great Lakes%Dixieland
 Great Lakes+Upper Midwest%Sunbelts%Dixieland%Northeast

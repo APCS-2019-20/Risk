@@ -23,7 +23,7 @@ public class CodeTest
 				bruh.getPlayerTerritories().get(2).setNumberOfUnits(4);
 				
 				bruh.addPlayerTerritories(DealingOut.findTerritoryByName("Sunbelts"));
-				bruh.getPlayerTerritories().get(3).setNumberOfUnits(2);
+				bruh.getPlayerTerritories().get(3).setNumberOfUnits(6);
 				
 				Player boi = new Player("Boi");
 				

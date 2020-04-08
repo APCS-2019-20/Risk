@@ -61,11 +61,54 @@ public class Battle
 				
 		}
 		
-		public static void attackFrom(Territory territory) {
-			System.out.println("Attacking from " + territory.getName());
+		public static void attackFrom(Territory territory)
+			{
+				Player attacker = territory.getOwner();
+
+				System.out.println("Attacking from " + territory.getName());
+
+				// choose who to attack
+
+				// find all connected enemy territories
+				ArrayList<Territory> possibleTargets = new ArrayList<Territory>();
+				for (Territory t : territory.getCanAccessTerritory())
+					{
+						if (!t.getOwner().equals(attacker))
+							{
+								possibleTargets.add(t);
+							}
+					}
+				// choose
+				// print
+				int index = 1;
+				System.out.println("From " + territory.getName() + ", you can attack:");
+				for (Territory t : possibleTargets)
+					{
+						System.out.println(index++ + ") " + t.getName());
+
+					}
+				System.out.println("Or:\n" + index + ") Not Attack");
+
+				// actually choose
+				int choice = Runner.userIntInput.nextInt();
+				if (choice > 0 && choice <= index)
+					{
+						if (choice == index)
+							{
+								return;
+							} else
+							{
+								attack(territory, possibleTargets.get(choice - 1));
+							}
+					}
+			}
+			
+			public static void attack(Territory departee, Territory target) {
+				System.out.println("succ");
+			}
 			
 		}
 		
 		
 		
-	}
+	
