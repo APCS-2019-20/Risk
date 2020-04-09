@@ -19,7 +19,6 @@ public class Runner
 				File territories = new File("TerritoriesInput.txt");
 				DealingOut.makeTerritories(territories);
 				RiskDirections.StartGame();
-				Introduction.introducePlayers();
 				biding.startingOut();
 				PlayingGame.playingGame();
 				
