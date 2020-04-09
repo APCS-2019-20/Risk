@@ -22,6 +22,8 @@ public class biding
 		
 		while(choices)
 			{
+				
+				Map.printMapWithInfo();
 			  System.out.println(currentPlayer.getName() + " Choose your territory!");
 			  System.out.println("These are your options: "
 			  		+ "\n ");
