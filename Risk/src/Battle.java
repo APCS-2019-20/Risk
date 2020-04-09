@@ -131,11 +131,11 @@ public class Battle
 				
 				//ask for dice amount of opponent
 				int amtOpponentDie = 2;
-				if (departee.getNumberOfUnits() < 2)
+				if (target.getNumberOfUnits() < 2)
 					{
-						amtOpponentDie = departee.getNumberOfUnits();
+						amtOpponentDie = 1;
 					}
-				if (amtOpponentDie != 1)
+				if (amtOpponentDie == 2)
 					{
 						System.out.println(opponent.getName() + ", you can roll up to " + amtOpponentDie
 								+ " dice. How many would you like to roll?");
@@ -212,11 +212,22 @@ public class Battle
 				
 				
 				//check if target is destroyed
-				//	change ownership
-				//	move troops
+				if(target.getNumberOfUnits() <= 0) {
+					
+					System.out.println("\n"+ attacker.getName() + ", "+target.getName()+ " has fallen!");
+//					//change ownership
+					target.swapOwnership();
+					//	move troops
+					int moving = amtAttackDie - attackerLoss;
+					departee.removeUnits(moving);
+					target.setNumberOfUnits(moving);
+				}
+				
 				
 				//	check if there are enough to try again
 				//	ask to forfeit
+				
+				Map.printMapWithInfo();
 			}
 			
 			public static int askForNumber(int max) {
