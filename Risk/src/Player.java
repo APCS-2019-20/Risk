@@ -66,19 +66,9 @@ public class Player
 
 	public String getNickname()
 	{
-		if (name.length()>= 4)
+
 		{
-			if(name.contains(" "))
-			{
-				String [] arrStr= name.split(" ");
-				return arrStr[0].substring(0,1).toUpperCase()+ arrStr[0].substring(1,2).toLowerCase() +
-						arrStr[1].substring(0,1).toUpperCase()+ arrStr[1].substring(1,2).toLowerCase();
-			}
-		return name.substring(0, 1).toUpperCase() + name.substring(1,3).toLowerCase();
-		}
-		else
-		{
-		return name;
+		return nickname;
 		}
 	}
 

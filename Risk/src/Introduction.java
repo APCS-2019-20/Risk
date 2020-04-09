@@ -32,7 +32,6 @@ public class Introduction
 		}
 		else
 			toReturn = str.substring(0,4);
-		
 		return toReturn;
 	}
 	
