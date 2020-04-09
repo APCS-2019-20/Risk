@@ -11,9 +11,9 @@ public class PlayingGame
 		while(isPlaying)
 		{
 			System.out.println("What would you like to do?"
-					+ "\n(1) See Map and what you own"
-					+ "\n(2) Attack"
-					+ "\n(3) See general map");
+					+ "\n1) See Map and what you own"
+					+ "\n2) Attack"
+					+ "\n3) See general map");
 			
 			int playerChoice = Runner.userIntInput.nextInt();
 			
