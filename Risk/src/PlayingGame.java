@@ -26,11 +26,13 @@ public class PlayingGame
 					+ "\n1) See Map and what you own"
 					+ "\n2) See Full Map"
 					+ "\n3) Attack"
-					+ "\n4) Reinforce / End Turn");
+					+ "\n4) Reinforce / End Turn"
+					+ "\n5) Forfeit");
 		
 			int playerChoice = Battle.askForNumber(5);
 			
-			switch(playerChoice) {
+			switch(playerChoice) 
+			{
 				case 1:
 					Map.printMapWithOwner(Runner.currentPlayer);
 					break;
@@ -45,13 +47,19 @@ public class PlayingGame
 				case 2:
 					Map.printMapWithInfo();
 					break;
-					
-					
-				
-				
+				case 5:
+					System.out.println("You forfeit. You lose!");
+					Runner.endGame();
+					break;
 				
 			}
 			
+			}
+			
+			if (Runner.currentPlayer.getTotalTerritories() == 8)
+			{
+				System.out.println(Runner.currentPlayer.getName() + " Won!!");
+				Runner.endGame();
 			}
 			
 			

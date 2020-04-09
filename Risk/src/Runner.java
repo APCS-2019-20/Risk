@@ -46,4 +46,10 @@ public class Runner
 
 			}
 		
+		public static void endGame()
+		{
+			System.out.println("Thanks for playing!");
+			System.exit(0);
+		}
+		
 	}
