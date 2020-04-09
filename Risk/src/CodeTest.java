@@ -30,6 +30,8 @@ public class CodeTest
 				bruh.addPlayerTerritories(DealingOut.findTerritoryByName("Sunbelts"));
 				bruh.getPlayerTerritories().get(3).setNumberOfUnits(2);
 				
+				Runner.players.add(bruh);
+				
 				Player boi = new Player("Boi");
 				Runner.players.add(boi);
 				
@@ -49,7 +51,11 @@ public class CodeTest
 				
 				//Battle.chooseAttack(bruh);
 				Reinforcing.endOfTurn();
+				Runner.players.add(boi);
 				
+				Map.printMapWithInfo();
+				
+				biding.startingOut();				
 			}
 
 		

@@ -82,6 +82,54 @@ public class RiskDirections
 		
 		System.out.println("To Start the game each of you have to choose which territoies you wish to own."
 				+ "\n However, this will rotate between the two of you, so basically whoever gets there first gets that territory...for now...;)");
-			biding.startingOut();
+			biding.startingOut();	
+			turns();
+	}
+	
+	public static void turns()
+	{
+		System.out.println("Okay, since you two have placed and arranged your troops/regeins how you want here is how to actually play the game.");
+		System.out.println("During each players during their turn will attact and possibly take over the territory they are attacking. "
+				+ "\n And other player who is being attacked must defened themselves. "
+				+ "\n Then that same player will have to move around their regemins. Now remeber there has to be at least one reginime per territory."
+				+ "\n Now during your turn you can choose to either do both or to move your troops. Because you can't just attack with out moving your tropps afterwards"
+				+ "\n if you take the territory you are attacking."
+				+ "\n How you determine who wins the battle (attack) is left up to fate. The dice will be rolled by each player. If the attacking player"
+				+ "\n rolls the higher number then they calm vicotry in that battle and take the portion of the territory they are attacking. "
+				+ "\n If the defendener rolls a high number they won the battle.");
+		
+		Scanner userInput = new Scanner(System.in);
+		int understanding = userInput.nextInt();
+	
+		System.out.println("And that is how you basically play the game. You two get that? "
+				+ "\n 1) Yes"
+				+ "\n 2) No");
+		
+		if(understanding == 1)
+		{
+			System.out.println("Great then let the Civil War begin!");
+		}
+		
+		else if(understanding == 2)
+		{
+			Scanner userInput2 = new Scanner(System.in);
+			int dontUnderstand = userInput.nextInt();
+			
+			System.out.println("Okay, what do you still not fully get?"
+					+ "\n 1) How turns work"
+					+ "\n 2) I don't want to paly anymore");
+			if(dontUnderstand == 1)
+			{
+				turns();
+			}
+			else if(dontUnderstand == 2)
+			{
+				System.out.println("Well, it's your guys loss. This is a really fun game! Bye now!");
+				System.exit(0);
+			}
+		
+		}
+		
+		
 	}
 }
