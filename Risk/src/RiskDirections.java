@@ -46,7 +46,6 @@ public class RiskDirections
 				
 				else if(knowRules == 2)
 				{
-					System.out.println("");
 					learnRules();
 				}
 		
@@ -54,12 +53,12 @@ public class RiskDirections
 			else if(choiceToPlay == 2)
 			{	
 				System.out.println("Well okay then have a fun doing something else...");
+				System.exit(0);
 			}
 	}
 	
 	public static void learnRules()
 	{
-		Introduction.introducePlayers();
 		
 		System.out.println("");
 		System.out.println("Okay, so the rules to Risk: United States can be a little bit confusing."
