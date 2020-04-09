@@ -112,9 +112,9 @@ public class Battle
 				
 				//ask for dice amount of attacker
 				int amtAttackDie = 3;
-				if (departee.getNumberOfUnits() < 3)
+				if (departee.getNumberOfUnits() < 4)
 					{
-						amtAttackDie = departee.getNumberOfUnits();
+						amtAttackDie = departee.getNumberOfUnits()-1;
 					}
 				if (amtAttackDie != 1)
 					{
@@ -159,6 +159,7 @@ public class Battle
 					}
 				
 				
+				System.out.println();
 				//print
 				System.out.println(attacker.getName()+ ", you rolled:");
 				printDice(AttackRolls);
