@@ -12,9 +12,11 @@ public class PlayingGame
 		Runner.currentPlayer = Runner.players.get(0);
 		while(isPlaying)
 		{
+
 			
 
 			System.out.println(Runner.currentPlayer.getName() + ", it's now your turn!");
+
 
 			
 			
