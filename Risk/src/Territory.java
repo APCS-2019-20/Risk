@@ -36,6 +36,14 @@ public class Territory
 	{
 		this.numberOfUnits = numberOfUnits;
 	}
+	
+	public void addUnits(int a) {
+		this.numberOfUnits+=a;
+	}
+	
+	public void removeUnits(int r) {
+		this.numberOfUnits-=r;
+	}
 
 	public ArrayList<String> getCanAccess()
 	{
@@ -73,8 +81,11 @@ public class Territory
 			}
 		
 		public void swapOwnership(){
+			this.owner.removePlayerTerritories(this);
+			this.owner.updateTotalTerritories();
 			this.owner = Runner.players.get((Runner.players.indexOf(this.owner)+1)%2);
-			
+			this.owner.addPlayerTerritories(this);
+			this.owner.updateTotalTerritories();
 		}
 	
 }

@@ -63,6 +63,11 @@ public class Player
 				this.playerTerritories.add(territory);
 				territory.setOwner(this);
 			}
+		
+		public void removePlayerTerritories(Territory territory) {
+			
+			this.playerTerritories.remove(territory);
+		}
 
 	public String getNickname()
 	{
@@ -93,6 +98,10 @@ public class Player
 	public void setTotalTerritories(int totalTerritories)
 	{
 		this.totalTerritories = totalTerritories;
+	}
+	
+	public void updateTotalTerritories() {
+		this.totalTerritories = playerTerritories.size();
 	}
 	
 	public int getplayerRegimens()
