@@ -63,11 +63,6 @@ public class Player
 				this.playerTerritories.add(territory);
 				territory.setOwner(this);
 			}
-		
-		public void removePlayerTerritories(Territory territory) {
-			
-			this.playerTerritories.remove(territory);
-		}
 
 	public String getNickname()
 	{
@@ -100,10 +95,6 @@ public class Player
 		this.totalTerritories = totalTerritories;
 	}
 	
-	public void updateTotalTerritories() {
-		this.totalTerritories = playerTerritories.size();
-	}
-	
 	public int getplayerRegimens()
 	{
 		return playerRegimens;
@@ -112,6 +103,12 @@ public class Player
 	public void setPlayerRegimens(int playerRegimens)
 	{
 		this.playerRegimens = playerRegimens;
+	}
+
+
+	public void updateTotalTerritories() 
+	{
+		this.totalTerritories = this.playerTerritories.size();
 	}
 	
 }
