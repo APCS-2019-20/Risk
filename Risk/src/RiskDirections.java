@@ -39,7 +39,6 @@ public class RiskDirections
 				{
 					System.out.println("Great! Let's get started then!"
 							+ "\n ");
-					Introduction.introducePlayers();
 				}
 				
 				else if(knowRules == 2)

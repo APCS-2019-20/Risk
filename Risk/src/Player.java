@@ -30,6 +30,7 @@ public class Player
 		playerTerritories = new ArrayList<Territory>();
 		totalTerritories = 0;
 		playerRegimens = 0;
+		nickname = Introduction.makeNickname(n);
 
 	}
 

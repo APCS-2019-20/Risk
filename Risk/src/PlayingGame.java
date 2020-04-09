@@ -9,23 +9,18 @@ public class PlayingGame
 		boolean isPlaying = true;
 		
 		
-		
+		Runner.currentPlayer = Runner.players.get(0);
 		while(isPlaying)
 		{
-<<<<<<< HEAD
-			Player currentPlayer = Runner.players.get(0);
-			System.out.println(currentPlayer.getName() + ", it's now your turn!");
-=======
+			
 
-			Player currentPlayer = Runner.players.get(0);
-			System.out.println(currentPlayer.getName() + ", it's now your turn!");
+			System.out.println(Runner.currentPlayer.getName() + ", it's now your turn!");
 
->>>>>>> upstream/master
 			
 			
 			boolean currentPlay = true;
 			while(currentPlay) {
-			System.out.println(currentPlayer.getName() + ", what would you like to do?"
+			System.out.println(Runner.currentPlayer.getName() + ", what would you like to do?"
 					+ "\n1) See Map and what you own"
 					+ "\n2) See Full Map"
 					+ "\n3) Attack"
@@ -35,10 +30,10 @@ public class PlayingGame
 			
 			switch(playerChoice) {
 				case 1:
-					Map.printMapWithOwner(currentPlayer);
+					Map.printMapWithOwner(Runner.currentPlayer);
 					break;
 				case 3:
-					Battle.chooseAttack(currentPlayer);
+					Battle.chooseAttack(Runner.currentPlayer);
 					break;
 				case 4:
 					Reinforcing.endOfTurn();
@@ -56,6 +51,9 @@ public class PlayingGame
 			}
 			
 			}
+			
+			
+			
 			
 			
 			
