@@ -6,7 +6,7 @@ public class Battle
 
 		public static void chooseAttack(Player attacker) {
 			
-			
+			Map.printMapWithInfo();
 			
 				// find all possible territories that have more than two troops
 				ArrayList<Territory> possibleDepartures = new ArrayList<Territory>();
