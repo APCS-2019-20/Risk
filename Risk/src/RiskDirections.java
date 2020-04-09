@@ -16,10 +16,12 @@ public class RiskDirections
 	
 		System.out.println("");
 		System.out.println("");
-	
-		System.out.println("Are you ready to enter a warzone?"
+		
+		Introduction.introducePlayers();
+		
+		System.out.println("Are you two ready to enter a warzone?"
 				+ "\n1) Yes, let's go! For Life, Liberty, and Freedom!"
-				+ "\n2) Nah, I would reather not ruin my friendships.");
+				+ "\n2) Nah, we would rather not ruin our friendship.");
 	
 		Scanner userInput = new Scanner(System.in);
 			int choiceToPlay = userInput.nextInt();
@@ -39,12 +41,10 @@ public class RiskDirections
 				{
 					System.out.println("Great! Let's get started then!"
 							+ "\n ");
-					Introduction.introducePlayers();
 				}
 				
-				else if(knowRules == 2)
+				else
 				{
-					System.out.println("");
 					learnRules();
 				}
 		
@@ -52,6 +52,7 @@ public class RiskDirections
 			else if(choiceToPlay == 2)
 			{	
 				System.out.println("Well okay then have a fun doing, well, something else?");
+				System.exit(0);
 			}
 	}
 	
@@ -95,14 +96,14 @@ public class RiskDirections
 				+ "\nNow there ALWAYS has to be at least one troop per territory."
 				+ "\nDuring your turn you can choose to either do both, just attack, or just move your troops."
 				+ "\n"
-				+ "\nWhat determines the winner of the battle (attack) is left up to fate. Dice will be rolled by each player. If the attacking player"
-				+ "\nrolls the higher number then they calm vicotry in that battle and take the portion of the territory they are attacking. "
-				+ "\nIf the defendener rolls a high number they won the battle.");
+				+ "\nWhat determines the winner of the battle (attack) is left up to fate. Each player will roll a certain number of die."
+				+ "\nThis number of die are based on the number of troops in each territory. "
+				+ "\nThe player that rolls the highest number on any certain di wins the battle.");
 		
 		Scanner userInput = new Scanner(System.in);
 		int understanding = userInput.nextInt();
 	
-		System.out.println("And that is how you basically play the game. You two get that? "
+		System.out.println("That is how you play the game. You two get that? "
 				+ "\n1) Yes"
 				+ "\n2) No");
 		
