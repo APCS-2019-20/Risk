@@ -18,7 +18,7 @@ public class Reinforcing
 		for (int i = 0; i < currentPlayer.getPlayerTerritories().size(); i++)
 		{
 
-			System.out.println("(" + territoryListCounter + ")" + " " + currentPlayer.getPlayerTerritories().get(i).getName()
+			System.out.println(territoryListCounter + ")" + " " + currentPlayer.getPlayerTerritories().get(i).getName()
 					+ " --> " + currentPlayer.getPlayerTerritories().get(i).getNumberOfUnits());
 			territoryListCounter++;
 		}
@@ -61,7 +61,7 @@ public class Reinforcing
 		for (int i = 0; i < currentPlayer.getPlayerTerritories().size(); i++)
 		{
 
-			System.out.println("(" + territoryListCounter + ")" + " " + currentPlayer.getPlayerTerritories().get(i).getName());
+			System.out.println(territoryListCounter + ")" + " " + currentPlayer.getPlayerTerritories().get(i).getName());
 			territoryListCounter++;
 		}
 		
