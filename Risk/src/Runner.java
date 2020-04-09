@@ -11,15 +11,18 @@ public class Runner
 		static Scanner userIntInput = new Scanner(System.in);
 		static ArrayList<Player> players = new ArrayList<Player>();
 		static ArrayList<Territory> territoriesArray = new ArrayList<Territory>();
+		static int currentPlayer = 0;
 		
 		
 		public static void main(String[] args) throws FileNotFoundException
 			{
 				File territories = new File("TerritoriesInput.txt");
 				DealingOut.makeTerritories(territories);
-				RiskDirections.StartGame();
-				PlayingGame.playingGame();
-
+				
+				//Introduction.introducePlayers();
+				//RiskDirections.StartGame();
+				//PlayingGame.playingGame();
+				Reinforcing.endOfTurn();
 				
 				
 				
