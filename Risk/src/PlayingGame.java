@@ -7,7 +7,6 @@ public class PlayingGame
 	public static void playingGame()
 	{
 		boolean isPlaying = true;
-		int whichPlayer = 0;
 		
 		while(isPlaying)
 		{
@@ -30,6 +29,15 @@ public class PlayingGame
 			else if(playerChoice == 3)
 			{
 				Map.printBlankMap();
+			}
+			
+			if (Runner.currentPlayer == Runner.players.size() - 1)
+			{
+				Runner.currentPlayer = 0;
+			}
+			else
+			{
+				Runner.currentPlayer++;
 			}
 		}
 	}
