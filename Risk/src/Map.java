@@ -109,7 +109,7 @@ public class Map
 					t.get(6).getOwner() == null?"":t.get(6).getOwner().getNickname(),
 					t.get(7).getOwner() == null?"":t.get(7).getNumberOfUnits(),
 					t.get(0).getOwner() == null?"":t.get(0).getOwner().getNickname(), 
-					t.get(3).getOwner() == null?"":t.get(3).getOwner().getNickname(),
+					t.get(2).getOwner() == null?"":t.get(2).getOwner().getNickname(),
 					t.get(6).getOwner() == null?"":t.get(6).getNumberOfUnits(),
 					t.get(0).getOwner() == null?"":t.get(0).getNumberOfUnits(),
 					t.get(2).getOwner() == null?"":t.get(2).getNumberOfUnits(),
