@@ -8,7 +8,8 @@ public class CodeTest
 				
 				
 			
-				File territories = new File("TerritoriesInput.txt");
+				//File territories = new File("TerritoriesInput.txt");
+				File territories = new File("TerritoryInput2.txt");
 				DealingOut.makeTerritories(territories);
 				
 			
@@ -46,6 +47,10 @@ public class CodeTest
 				boi.addPlayerTerritories(DealingOut.findTerritoryByName("New England"));
 				boi.getPlayerTerritories().get(3).setNumberOfUnits(6);
 				
+				//Map.printMapWithInfo();
+				
+				//Battle.chooseAttack(bruh);
+				Reinforcing.endOfTurn();
 				Runner.players.add(boi);
 				
 				Map.printMapWithInfo();
