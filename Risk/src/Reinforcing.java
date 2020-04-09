@@ -35,15 +35,15 @@ public class Reinforcing
 		System.out.println();
 		
 		System.out.println("Would you like to reinforce by moving troops?"
-				+ "\n(1) Yes"
-				+ "\n(2) No");
+				+ "\n1) Yes"
+				+ "\n2) No");
 		
 		int wantToReinforce = Runner.userIntInput.nextInt();
 		
 		if (wantToReinforce == 1)
 			movePieces(currentPlayer);
 		else
-			System.out.println("Okay, next player\'s turn.");
+			System.out.println("Okay, next player's turn.");
 		
 	}
 	

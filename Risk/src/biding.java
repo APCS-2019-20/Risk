@@ -9,9 +9,9 @@ public class biding
 	
 	static public void startingOut()
 	{
-		System.out.println("Let the 'biding' begin! Each of you have 13 regimens that you will divide however you want to across the four terrioties you choose"
-				+ "\n However, each of your territories must have at least 1 regimen residing within its boarders."
-				+ "\n ");
+		System.out.println("Let the 'biding' begin! Each of you have 13 troops that you will divide however you want to across the four terrioties you choose"
+				+ "\nHowever, each of your territories must have at least 1 troop residing within its boarders."
+				+ "\n");
 		
 		currentPlayer = Runner.players.get(0);
 		startTerritories.addAll(Runner.territoriesArray);
@@ -26,7 +26,7 @@ public class biding
 				Map.printMapWithInfo();
 			  System.out.println(currentPlayer.getName() + " Choose your territory!");
 			  System.out.println("These are your options: "
-			  		+ "\n ");
+			  		+ "\n");
 			  
 			  for(int i = 0; i < startTerritories.size(); i++)
 			  {
@@ -41,7 +41,7 @@ public class biding
 			  
 			  System.out.println("Total number of troops: " + currentPlayer.getplayerRegimens()
 			  		+ "\n How many troops do you want to place here? "
-			  		+ "\n ");
+			  		+ "\n");
 			  
 			  
 			  int child = 4 - currentPlayer.getTotalTerritories();
@@ -71,7 +71,7 @@ public class biding
 			if(p2.getplayerRegimens() > 0)
 			{
 				System.out.println(" ");
-				System.out.println(p2.getName() + " since you did not place all of you troops the remainder has gone into " + p2.getPlayerTerritories().get(p2.getPlayerTerritories().size()-1).getName());
+				System.out.println(p2.getName() + ", since you did not place all of your troops the remainder has gone into " + p2.getPlayerTerritories().get(p2.getPlayerTerritories().size()-1).getName() + ".");
 				p2.getPlayerTerritories().get(p2.getPlayerTerritories().size()-1).addUnits(p2.getplayerRegimens());
 
 			}

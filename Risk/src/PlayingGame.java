@@ -12,8 +12,15 @@ public class PlayingGame
 		
 		while(isPlaying)
 		{
+<<<<<<< HEAD
 			Player currentPlayer = Runner.players.get(0);
 			System.out.println(currentPlayer.getName() + ", it's now your turn!");
+=======
+
+			Player currentPlayer = Runner.players.get(0);
+			System.out.println(currentPlayer.getName() + ", it's now your turn!");
+
+>>>>>>> upstream/master
 			
 			
 			boolean currentPlay = true;
