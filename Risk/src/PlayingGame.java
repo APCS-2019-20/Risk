@@ -8,37 +8,59 @@ public class PlayingGame
 	{
 		boolean isPlaying = true;
 		
+		
+		
 		while(isPlaying)
 		{
-			System.out.println("What would you like to do?"
+
+			Player currentPlayer = Runner.players.get(0);
+			System.out.println(currentPlayer.getName() + ", it's now your turn!");
+
+			
+			
+			boolean currentPlay = true;
+			while(currentPlay) {
+			System.out.println(currentPlayer.getName() + ", what would you like to do?"
 					+ "\n1) See Map and what you own"
-					+ "\n2) Attack"
-					+ "\n3) See general map");
+					+ "\n2) See Full Map"
+					+ "\n3) Attack"
+					+ "\n4) Reinforce / End Turn");
+		
+			int playerChoice = Battle.askForNumber(5);
 			
-			int playerChoice = Runner.userIntInput.nextInt();
+			switch(playerChoice) {
+				case 1:
+					Map.printMapWithOwner(currentPlayer);
+					break;
+				case 3:
+					Battle.chooseAttack(currentPlayer);
+					break;
+				case 4:
+					Reinforcing.endOfTurn();
+					swapCurrentPlayer();
+					currentPlay=false;
+					break;
+				case 2:
+					Map.printMapWithInfo();
+					break;
+					
+					
+				
+				
+				
+			}
+			
+			}
 			
 			
-			if (playerChoice == 1)
-			{
-				Map.printMapWithInfo();
-			}
-			else if(playerChoice == 2)
-			{
-				System.out.println("Test");
-			}
-			else if(playerChoice == 3)
-			{
-				Map.printBlankMap();
-			}
 			
-			if (Runner.currentPlayer == Runner.players.size() - 1)
-			{
-				Runner.currentPlayer = 0;
-			}
-			else
-			{
-				Runner.currentPlayer++;
-			}
 		}
 	}
+
+	private static void swapCurrentPlayer()
+		{
+			Runner.currentPlayer = Runner.players.get((Runner.players.indexOf(Runner.currentPlayer)+1)%2);
+			// TODO Auto-generated method stub
+			
+		}
 }

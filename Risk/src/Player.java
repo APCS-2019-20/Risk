@@ -116,5 +116,12 @@ public class Player
 	{
 		this.totalTerritories = this.playerTerritories.size();
 	}
+
+
+	public void removePlayerTerritories(Territory territory)
+		{
+			this.playerTerritories.remove(territory);
+			
+		}
 	
 }

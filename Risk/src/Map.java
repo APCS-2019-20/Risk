@@ -105,22 +105,22 @@ public class Map
 					"                             \\    /                   \\  |\n" +
 					"                              \\  |                     '\\'\n" +
 					"                               `~'\n",
-					t.get(7).getOwner().getNickname(),
-					t.get(6).getOwner().getNickname(),
-					t.get(7).getNumberOfUnits(),
-					t.get(0).getOwner().getNickname(),
-					t.get(3).getOwner().getNickname(),
-					t.get(6).getNumberOfUnits(),
-					t.get(0).getNumberOfUnits(),
-					t.get(2).getNumberOfUnits(),
-					t.get(4).getOwner().getNickname(),
-					t.get(4).getNumberOfUnits(),
-					t.get(1).getOwner().getNickname(),
-					t.get(5).getOwner().getNickname(),
-					t.get(1).getNumberOfUnits(),
-					t.get(3).getOwner().getNickname(),
-					t.get(5).getNumberOfUnits(),
-					t.get(3).getNumberOfUnits()
+					t.get(7).getOwner() == null?"":t.get(7).getOwner().getNickname(),
+					t.get(6).getOwner() == null?"":t.get(6).getOwner().getNickname(),
+					t.get(7).getOwner() == null?"":t.get(7).getNumberOfUnits(),
+					t.get(0).getOwner() == null?"":t.get(0).getOwner().getNickname(), 
+					t.get(2).getOwner() == null?"":t.get(2).getOwner().getNickname(),
+					t.get(6).getOwner() == null?"":t.get(6).getNumberOfUnits(),
+					t.get(0).getOwner() == null?"":t.get(0).getNumberOfUnits(),
+					t.get(2).getOwner() == null?"":t.get(2).getNumberOfUnits(),
+					t.get(4).getOwner() == null?"":t.get(4).getOwner().getNickname(),
+					t.get(4).getOwner() == null?"":t.get(4).getNumberOfUnits(),
+					t.get(1).getOwner() == null?"":t.get(1).getOwner().getNickname(),
+					t.get(5).getOwner() == null?"":t.get(5).getOwner().getNickname(),
+					t.get(1).getOwner() == null?"":t.get(1).getNumberOfUnits(),
+					t.get(3).getOwner() == null?"":t.get(3).getOwner().getNickname(),
+					t.get(5).getOwner() == null?"":t.get(5).getNumberOfUnits(),
+					t.get(3).getOwner() == null?"":t.get(3).getNumberOfUnits()
 					);
 			
 			
@@ -175,7 +175,7 @@ public class Map
 					"     |         |~~|                    /   %4.4s   /      <----%9.9s\n" +
 					"     |         |  '---------,        ----       /     ~/~\\,\n" +
 					"     ',        |            |~~~~~~~|    \\    ,'~~\\  /    |\n" +
-					"      |        |    %4.4s    |             \\_-~     `~     \\\n" +
+					"      |        |    %4.4s    |             \\_-~     `~     \\\n" + 
 					"      ',      ,-  %7.7s  -+             /   %9.9s   /\n" +
 					"       '_     |    %4.4s    |   %8.8s   |     %4.4s    ,/\n" +
 					"         \\    |            |     %4.4s     /            /\n" +
@@ -207,6 +207,9 @@ public class Map
 			
 			
 		}
+		
+		
+		
 		//TODO print map with just names and ownership
 		
 		

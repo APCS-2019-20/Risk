@@ -8,8 +8,8 @@ public class CodeTest
 				
 				
 			
-				//File territories = new File("TerritoriesInput.txt");
-				File territories = new File("TerritoryInput2.txt");
+				File territories = new File("TerritoriesInput.txt");
+//				File territories = new File("TerritoryInput2.txt");
 				DealingOut.makeTerritories(territories);
 				
 			
@@ -49,8 +49,8 @@ public class CodeTest
 				//Map.printMapWithInfo();
 				
 				//Battle.chooseAttack(bruh);
-				Reinforcing.endOfTurn();
-				Runner.players.add(boi);
+//				Reinforcing.endOfTurn();
+//				Runner.players.add(boi);
 				
 				//Map.printMapWithInfo();
 				

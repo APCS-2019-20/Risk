@@ -7,7 +7,7 @@ public class Reinforcing
 	{
 		int nextPieces = getPlayersNextPieces();
 		
-		Player currentPlayer = Runner.players.get(Runner.currentPlayer);
+		Player currentPlayer = Runner.currentPlayer;
 		
 		System.out.println("You have " + nextPieces + " new troops to place on a territory. What territory would you like to place it on?");
 		int territoryListCounter = 1;
@@ -121,7 +121,7 @@ public class Reinforcing
 
 	private static int getPlayersNextPieces()
 	{
-		ArrayList<Territory> currentPlayersTerritories = Runner.players.get(Runner.currentPlayer).getPlayerTerritories();
+		ArrayList<Territory> currentPlayersTerritories = Runner.currentPlayer.getPlayerTerritories();
 		double howManyTerritories = (double) currentPlayersTerritories.size();
 		
 		double toDistribute = howManyTerritories / 2.0;
