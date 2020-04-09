@@ -24,7 +24,7 @@ public class CodeTest
 				bruh.getPlayerTerritories().get(1).setNumberOfUnits(3);
 
 				bruh.addPlayerTerritories(DealingOut.findTerritoryByName("Upper Midwest"));
-				bruh.getPlayerTerritories().get(2).setNumberOfUnits(2);
+				bruh.getPlayerTerritories().get(2).setNumberOfUnits(3);
 				
 				bruh.addPlayerTerritories(DealingOut.findTerritoryByName("Sunbelts"));
 				bruh.getPlayerTerritories().get(3).setNumberOfUnits(2);
@@ -33,7 +33,7 @@ public class CodeTest
 				Runner.players.add(boi);
 				
 				boi.addPlayerTerritories(DealingOut.findTerritoryByName("Great Lakes"));
-				boi.getPlayerTerritories().get(0).setNumberOfUnits(1);
+				boi.getPlayerTerritories().get(0).setNumberOfUnits(10);
 				
 				boi.addPlayerTerritories(DealingOut.findTerritoryByName("Dixieland"));
 				boi.getPlayerTerritories().get(1).setNumberOfUnits(3);

@@ -222,13 +222,25 @@ public class Battle
 					int moving = amtAttackDie - attackerLoss;
 					departee.removeUnits(moving);
 					target.setNumberOfUnits(moving);
+					return;
 				}
 				
-				
-				//	check if there are enough to try again
-				//	ask to forfeit
-				
 				Map.printMapWithInfo();
+
+				//	check if there are enough to try again
+					if(departee.getNumberOfUnits()>1) {
+						System.out.println(attacker.getName() +", would you like to attack "+target.getName()+" from "+departee.getName()+" again?\n1) Yes\n2) No");
+						int answer = askForNumber(2);
+						if(answer == 1) {
+							Battle.attack(departee, target);
+							
+						}
+					
+					}else {
+						System.out.println(attacker.getName() + ", you do not have enough troops in " + departee.getName() + " to attack again.");
+					}
+				
+				
 			}
 			
 			public static int askForNumber(int max) {
