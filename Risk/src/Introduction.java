@@ -24,7 +24,7 @@ public class Introduction
 		
 	}
 	
-	private static String makeNickname(String str)
+	public static String makeNickname(String str)
 	{
 		if(str.length() <= 4) return str;
 		String toReturn = "";
