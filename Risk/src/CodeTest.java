@@ -25,6 +25,8 @@ public class CodeTest
 				bruh.addPlayerTerritories(DealingOut.findTerritoryByName("Sunbelts"));
 				bruh.getPlayerTerritories().get(3).setNumberOfUnits(6);
 				
+				Runner.players.add(bruh);
+				
 				Player boi = new Player("Boi");
 				
 				boi.addPlayerTerritories(DealingOut.findTerritoryByName("Great Lakes"));
@@ -39,10 +41,11 @@ public class CodeTest
 				boi.addPlayerTerritories(DealingOut.findTerritoryByName("New England"));
 				boi.getPlayerTerritories().get(3).setNumberOfUnits(6);
 				
+				Runner.players.add(boi);
+				
 				Map.printMapWithInfo();
 				
-				Battle.chooseAttack(bruh);
-				
+				biding.startingOut();				
 			}
 
 		
