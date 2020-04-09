@@ -111,6 +111,12 @@ public class Battle
 				Player opponent = target.getOwner();
 				
 				//ask for dice amount of attacker
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					
+					e.printStackTrace();
+				}
 				int amtAttackDie = 3;
 				if (departee.getNumberOfUnits() < 4)
 					{
@@ -130,6 +136,12 @@ public class Battle
 				
 				
 				//ask for dice amount of opponent
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					
+					e.printStackTrace();
+				}
 				int amtOpponentDie = 2;
 				if (target.getNumberOfUnits() < 2)
 					{
@@ -147,6 +159,12 @@ public class Battle
 					}
 				
 				//roll
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					
+					e.printStackTrace();
+				}
 				ArrayList<Integer> AttackRolls = new ArrayList<Integer>();
 				ArrayList<Integer> OpponentRolls = new ArrayList<Integer>();
 				for (int i = 0; i < amtAttackDie; i++)
@@ -195,6 +213,12 @@ public class Battle
 
 						// display individual outcome
 						printDicePair(attackHigh, opponentHigh);
+						try {
+							Thread.sleep(1000);
+						} catch (InterruptedException e) {
+							
+							e.printStackTrace();
+						}
 					}
 				
 				//display overall losses
